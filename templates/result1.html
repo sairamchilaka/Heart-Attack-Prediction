@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Result1</title>
+        <style>
+          .btn {
+                        background-color: red;
+                        border: none;
+                        color: white;
+                        padding: 16px 32px;
+                        text-align: center;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        opacity: 0.6;
+                        transition: 0.4s;
+                        border-radius: 20px;
+                                               
+                    }
+        </style>
+    </head>
+    <body bgcolor="#b2b2b2">
+
+      <h2>Your results are ready!!!</h2>
+      <h2>click on the button below for the result...</h2>
+
+    <button class="btn" onclick="typeWriter()">Click me</button>
+
+    <h1 id="demo"></h1>
+
+    <script>
+    var i = 0;
+    var txt = 'Your Heart is under trouble please consult the doctor as soon as possible.';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,290 @@
+<html>
+
+    <head>
+        <title>Home Page</title>
+            <style>
+
+                body{
+                        background-image: url('/static/pics/bgwebp.webp');
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        background-size: 100% 100%;
+                    }
+                
+                    .btn {
+                        background-color: red;
+                        border: none;
+                        color: white;
+                        padding: 16px 32px;
+                        text-align: center;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        opacity: 0.6;
+                        transition: 0.4s;
+                        border-radius: 20px;
+                        margin-left: 150px;
+                        
+                    }
+
+                    .btn:hover {
+                        opacity: 1
+                    }
+
+                    input[type=text]:hover{
+                        background-color: yellow;
+                    }
+
+                    input[type=text] {
+                        border-radius: 10px;
+                        background: powderblue;
+                        padding: 15px;
+                        width: 200px;
+                        height: 15px;
+                        border: none;
+                        outline: none;
+                    }
+
+            </style>
+
+    </head>
+
+    <body >
+        
+            <img src="{{ url_for('static',filename='pics/heart1.png') }}" height="130px" width="180px" style="margin-left: 10px; float: left;">
+
+            <h1 style="font-size: 60px; margin-top: 0px; margin-left: 420px; font-family: 'Times New Roman', Times, serif;">Heart Attack Prediction</h1>
+        
+            <table style="font-size: 20px; margin-left: 150px; margin-top: 100px;">
+
+                <form action="/submit" method="post">
+                
+
+                    <tr>
+
+                        <td>
+
+                            <label for="age" >AGE : </label>
+                        
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="age" id="age" placeholder="0" required>
+
+                        </td>
+                    
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="GENDER" >GENDER(0/1) : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="gender"  id="gender" required placeholder="0">
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="cp" >CHEST PAIN(0-3) : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="cp" id="cp"  placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="trestbps" >TRESTBPS : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="trestbps"  id="trestbps" placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="chol" >CHOLESTROL : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="chol" id="chol"  placeholder="0" required>
+
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="fbs" >FBS : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="fbs"  id="fbs" placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <label for="restecg" >RESTECG(0-2) : </label>
+
+                        </td>
+                        
+                        <td>
+
+                            <input type="text" name="restecg" id="restecg"  placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="thalach" >THALACH : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="thalach"  id="thalach" placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+                    
+
+                    <tr>
+
+                        <td>
+
+                            <label for="exang" >EXANG : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="exang" id="exang"  placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="oldpeak" >OLDPEAK : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="oldpeak"  id="oldpeak" placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="slope" >SLOPE(0-2) : </label>
+                            
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="slope" id="slope"  placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="ca" >CA(0-3) : </label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="ca"  id="ca" placeholder="0" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="thal" >THAL(0-2) : </label>
+                        
+                        </td>
+
+                        <td>
+
+                            <input type="text" name="thal" id="thal" placeholder="0" required >
+
+                        </td>
+
+                    </tr>     
+                    
+                    <tr>
+
+                        <td colspan="2">
+
+                            <button class="btn">SUBMIT</button>
+                        
+                        </td>
+
+                    </tr>
+                    
+                </form>
+                
+            </table>    
+            
+        
+
+    </body>
+
+</html>
